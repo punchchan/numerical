@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gauss-Jordan Method Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="calculator">
+    <h1>Gauss-Jordan Method</h1>
+    <form id="gauss-jordan-form">
+      <h2>Select Matrix Size:</h2>
+      <select id="matrix-size" onchange="createMatrixInputs()">
+        <option value="2">2x2</option>
+        <option value="3">3x3</option>
+        <option value="4">4x4</option>
+      </select>
+
+      <div id="matrix-container"></div>
+
+      <button type="submit">Solve System</button>
+    </form>
+
+    <div id="result">
+      <h2>Results:</h2>
+      <table id="result-table">
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>x</td><td id="x-value"></td></tr>
+          <tr><td>y</td><td id="y-value"></td></tr>
+          <tr><td>z</td><td id="z-value"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <canvas id="graphCanvas"></canvas>
+    </div>
+  </div>
+
+  <script src="gaussJordan.js"></script>
+</body>
+</html>
