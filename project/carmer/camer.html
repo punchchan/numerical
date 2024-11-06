@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cramer's Rule Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cramer's Rule Matrix Calculator</h1>
+
+        <label for="matrix-size">Choose matrix size:</label>
+        <select id="matrix-size" onchange="createMatrix()">
+            <option value="2">2x2</option>
+            <option value="3">3x3</option>
+            <option value="4">4x4</option>
+        </select>
+
+        <div id="matrix-container"></div>
+
+        <div id="constants-container"></div>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="cramerRule.js"></script>
+</body>
+</html>
