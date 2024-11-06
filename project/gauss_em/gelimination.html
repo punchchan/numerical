@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gauss Elimination Method Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Gauss Elimination Method</h1>
+
+    <form id="gauss-form">
+      <label for="matrix-size">Select Matrix Size:</label>
+      <select id="matrix-size" onchange="createMatrixInputs()">
+        <option value="2">2x2</option>
+        <option value="3">3x3</option>
+        <option value="4">4x4</option>
+      </select>
+
+      <div id="matrix-container"></div>
+      <button type="submit">Solve System</button>
+    </form>
+
+    <div id="result">
+      <h2>Results:</h2>
+      <table id="result-table">
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>x</td><td id="x-value"></td></tr>
+          <tr><td>y</td><td id="y-value"></td></tr>
+          <tr><td>z</td><td id="z-value"></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="gaussElimination.js"></script>
+
+</body>
+</html>
