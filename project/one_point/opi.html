@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One-Point Iteration Method Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="calculator">
+    <h1>One-Point Iteration Method</h1>
+
+    <form id="one-point-form">
+      <label for="function">Function (g(x), in terms of x):</label>
+      <input type="text" id="function" placeholder="e.g., cos(x)" required>
+
+      <label for="initial-guess">Initial Guess:</label>
+      <input type="number" id="initial-guess" step="0.01" required>
+
+      <label for="tolerance">Tolerance (epsilon):</label>
+      <input type="number" id="tolerance" step="0.000001" value="0.000001" required>
+
+      <button type="submit">Find Fixed Point</button>
+    </form>
+
+    <div id="result">
+      <h2>Result:</h2>
+      <p id="fixed-point"></p>
+      <p id="iterations"></p>
+    </div>
+
+    <div>
+        <canvas id="graphCanvas"></canvas>
+    </div>
+  </div>
+
+  <script src="one_point.js"></script>
+</body>
+</html>
