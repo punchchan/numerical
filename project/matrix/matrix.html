@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrix Inversion Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Matrix Inversion Calculator</h1>
+
+    <form id="matrix-form">
+      <label for="matrix-size">Select Matrix Size:</label>
+      <select id="matrix-size" onchange="createMatrixInputs()">
+        <option value="2">2x2</option>
+        <option value="3">3x3</option>
+        <option value="4">4x4</option>
+      </select>
+
+      <div id="matrix-container"></div>
+      <button type="submit">Calculate Inverse</button>
+    </form>
+
+    <div id="result">
+      <h2>Inverse Matrix:</h2>
+      <table id="result-table"></table>
+
+      <div id="variable-values">
+        <h3>Calculated Values:</h3>
+        <div id="x-value"></div>
+        <div id="y-value"></div>
+        <div id="z-value"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
